@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/toolisticon/oc-routes-prometheus-exporter",
   "dependencies": {
+    "cron": "^1.6.0",
     "openshift-rest-client": "^1.6.2",
     "request-promise-native": "^1.0.5"
   },

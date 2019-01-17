@@ -1,4 +1,4 @@
-
+const CronJob = require('cron').CronJob;
 const http = require('http');
 const request = require('request-promise-native');
 
@@ -32,7 +32,7 @@ async function receiveScanResult (hostname) {
   prometheus.addMetric(response);
 }
 
-async function init (hostname) {
+async function triggerUpdate (hostname) {
   log.info('Start reading route information.');
   // read routes
   routes.list().then(routes => {
@@ -58,8 +58,6 @@ async function init (hostname) {
   }, log.error);
 }
 
-init();
-
 // start http server
 function exporter () {
   const server = http.createServer((req, res) => {
@@ -71,10 +69,17 @@ function exporter () {
     }
   });
 
-  const port = 9000; // TODO move to arg
+  const port = 9000; // TODO move to config
 
   server.listen(port);
   log.info(`prometheus-exporter listening at ${port}`);
 }
+
+/* eslint no-new: "off" */
+// TODO move to config
+new CronJob('0 * * * * *', () => {
+  log.info(`Triggering check`);
+  triggerUpdate();
+}, null, true, 'UTC');
 
 exporter();
