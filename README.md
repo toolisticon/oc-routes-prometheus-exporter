@@ -1,5 +1,6 @@
-# oc-routes-prometheus-exporter
-Monitor OpenShift Routes in Prometheus
+# Monitor OpenShift Routes in Prometheus
+
+[![Build Status](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter.svg?branch=master)](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter)
 
 > Still **WIP**
 
