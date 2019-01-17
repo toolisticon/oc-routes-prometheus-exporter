@@ -1,0 +1,48 @@
+{
+  "name": "@toolisticon/oc-routes-prometheus-exporter",
+  "version": "1.0.1",
+  "description": "Produces Metrics of Pm2 of running instances.little updated version of https://github.com/burningtree/pm2-prometheus-exporter, any PR is appriciated.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toolisticon/oc-routes-prometheus-exporter.git"
+  },
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "index.js"
+    }
+  ],
+  "keywords": [
+    "openshift",
+    "prometheus",
+    "metrics",
+    "pmx"
+  ],
+  "author": "Martin Reinhardt",
+  "contributor": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toolisticon/oc-routes-prometheus-exporter/issues"
+  },
+  "homepage": "https://github.com/toolisticon/oc-routes-prometheus-exporter",
+  "dependencies": {
+    "openshift-rest-client": "^1.6.2",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-semistandard": "^13.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
