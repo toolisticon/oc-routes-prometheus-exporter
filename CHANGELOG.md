@@ -1,3 +1,13 @@
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.1...v0.3.2) (2019-01-18)
+
+
+### Bug Fixes
+
+* **Cron:** Switch to hourly scan ([c28d0f6](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/c28d0f6))
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.0...v0.3.1) (2019-01-18)
 
