@@ -1,7 +1,7 @@
 const CronJob = require('cron').CronJob;
 const http = require('http');
 const request = require('request-promise-native');
-
+const sslChecker = require('ssl-checker');
 const log = require('./lib/logger');
 const routes = require('./lib/routes');
 const prometheus = require('./lib/prometheus');
@@ -29,7 +29,25 @@ async function receiveScanResult (hostname) {
 
   const response = await request(options);
   response.url = hostname;
-  prometheus.addMetric(response);
+  prometheus.addMozillaMetric(response);
+  // add cert metric
+  sslChecker(hostname).then((result) => {
+    result.url = hostname;
+    result.status = 200;
+    prometheus.addExpireMetric(result);
+  }).catch((err) => {
+    const result = {
+      url: hostname,
+      valid: false
+    };
+    if (err.code === 'ENOTFOUND') {
+      result.status = 404;
+      prometheus.addExpireMetric(result);
+    } else {
+      result.status = 400;
+      prometheus.addExpireMetric(result);
+    }
+  });
 }
 
 async function triggerUpdate (hostname) {
@@ -53,7 +71,7 @@ async function triggerUpdate (hostname) {
           log.info(`Reading scan results for ${hostname}`);
           receiveScanResult(hostname);
         });
-      }, 20000);
+      }, 200);
     });
   }, log.error);
 }

@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "npm i",
     "debug": "node --inspect-brk index.js",
+    "start": "node index.js",
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
@@ -47,7 +48,8 @@
     "cron": "^1.6.0",
     "moment": "^2.23.0",
     "openshift-rest-client": "^1.6.2",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "ssl-checker": "^1.2.1"
   },
   "devDependencies": {
     "conventional-changelog-cli": "2.0.0",
