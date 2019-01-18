@@ -30,13 +30,18 @@ node {
         stage('Deploy') {
             // NodeJS Publish
             if (git.isProductionBranch()){
-            nodeJS.publish('.')
-            } else {
-              nodeJS.publishSnapshot('.', env.BUILD_NUMBER, env.BRANCH_NAME)
+                nodeJS.publish('.')
+                // Docker Publish
+                docker.withRegistry('https://registry-1.docker.io/v2/', 'docker-hub-holisticon') {
+                    image.push('latest')
+                }
             }
-            // Docker Publish
-            docker.withRegistry('https://registry-1.docker.io/v2/', 'docker-hub-holisticon') {
-                image.push("${env.BUILD_NUMBER}")
+            } else {
+                nodeJS.publishSnapshot('.', env.BUILD_NUMBER, env.BRANCH_NAME)
+                // Docker Publish
+                docker.withRegistry('https://registry-1.docker.io/v2/', 'docker-hub-holisticon') {
+                    image.push("${env.BUILD_NUMBER}")
+                }
             }
         }
 
