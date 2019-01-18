@@ -1,3 +1,13 @@
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.0...v0.3.1) (2019-01-18)
+
+
+### Bug Fixes
+
+* **Prometheus:** Correct quantile to float ([d7d5305](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/d7d5305))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.2.0...v0.3.0) (2019-01-18)
 
