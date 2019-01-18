@@ -1,6 +1,6 @@
 {
   "name": "@toolisticon/oc-routes-prometheus-exporter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Produces Metrics of Pm2 of running instances.little updated version of https://github.com/burningtree/pm2-prometheus-exporter, any PR is appriciated.",
   "main": "index.js",
   "scripts": {
