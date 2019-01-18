@@ -1,3 +1,19 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.2...v0.4.0) (2019-01-18)
+
+
+### Bug Fixes
+
+* **Build:** Corrected typo in Jenkins build ([ed202dd](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/ed202dd))
+* **Parsing:** Reduce result object ([262a695](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/262a695))
+
+
+### Features
+
+* **SSL:** Providing ssl expiry details ([49cf69b](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/49cf69b))
+
+
+
 <a name="0.3.2"></a>
 ## [0.3.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.1...v0.3.2) (2019-01-18)
 
