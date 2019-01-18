@@ -6,7 +6,7 @@ properties properties: [
 @Library('holisticon-build-library')
 def build = new de.holisticon.ci.jenkins.Build()
 def nodeJS = new de.holisticon.ci.jenkins.NodeJS()
-
+def git = new de.holisticon.ci.jenkins.Git()
 def notify = new de.holisticon.ci.jenkins.Notify()
 
 node {
@@ -29,7 +29,7 @@ node {
 
         stage('Deploy') {
             // NodeJS Publish
-            if(git.isProductionBranch()){
+            if (git.isProductionBranch()){
             nodeJS.publish('.')
             } else {
               nodeJS.publishSnapshot('.', env.BUILD_NUMBER, env.BRANCH_NAME)
