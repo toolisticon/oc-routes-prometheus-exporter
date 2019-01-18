@@ -35,7 +35,6 @@ node {
                 docker.withRegistry('https://registry-1.docker.io/v2/', 'docker-hub-holisticon') {
                     image.push('latest')
                 }
-            }
             } else {
                 nodeJS.publishSnapshot('.', env.BUILD_NUMBER, env.BRANCH_NAME)
                 // Docker Publish
@@ -46,7 +45,7 @@ node {
         }
 
     } catch (e) {
-        notify.buildMessage(currentBuild, true, 'holi-oss', 'Error with recent changes: ' + build.summarizeBuild(currentBuild))
+        notify.buildMessage(currentBuild, 'holi-oss', 'Error with recent changes: ' + build.summarizeBuild(currentBuild))
         throw e
     }
 
