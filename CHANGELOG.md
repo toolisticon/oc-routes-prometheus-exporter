@@ -1,3 +1,19 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.2.0...v0.3.0) (2019-01-18)
+
+
+### Bug Fixes
+
+* **Docker:** Set correct license ([0db623d](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/0db623d))
+
+
+### Features
+
+* **Docker:** Improve docker image with oc login ([0e40ebd](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/0e40ebd))
+* **Prometheus:** Support for nested objects ([41ae611](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/41ae611))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/08fa87d...v0.2.0) (2019-01-18)
 
