@@ -4,6 +4,7 @@
   "description": "Produces Metrics of Pm2 of running instances.little updated version of https://github.com/burningtree/pm2-prometheus-exporter, any PR is appriciated.",
   "main": "index.js",
   "scripts": {
+    "clean": "npm i",
     "lint": "eslint .",
     "test": "npm run lint"
   },
