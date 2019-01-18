@@ -1,5 +1,11 @@
 {
   "extends": "semistandard",
+  "env": {
+    "jasmine": true
+  },
+  "plugins": [
+    "jasmine"
+  ],
   "rules": {
     "prefer-const": "error",
     "block-scoped-var": "error",

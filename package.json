@@ -1,12 +1,16 @@
 {
   "name": "@toolisticon/oc-routes-prometheus-exporter",
   "version": "0.2.0",
-  "description": "Produces Metrics of Pm2 of running instances.little updated version of https://github.com/burningtree/pm2-prometheus-exporter, any PR is appriciated.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "npm i",
+    "debug": "node --inspect-brk index.js",
     "lint": "eslint .",
-    "test": "npm run lint",
+    "pretest": "npm run lint",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "test:watch": "nodemon jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "test:debug": "node --inspect-brk -i node_modules/jasmine/bin/jasmine.js spec/prometheus.spec.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
     "release": "npm run test && npm run changelog && npm run changelog:add",
@@ -41,6 +45,7 @@
   "homepage": "https://github.com/toolisticon/oc-routes-prometheus-exporter",
   "dependencies": {
     "cron": "^1.6.0",
+    "moment": "^2.23.0",
     "openshift-rest-client": "^1.6.2",
     "request-promise-native": "^1.0.5"
   },
@@ -50,9 +55,12 @@
     "eslint-config-semistandard": "^13.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jasmine": "^2.10.1",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.0.0",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.9"
   }
 }

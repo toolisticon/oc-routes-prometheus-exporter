@@ -23,3 +23,9 @@ To debug run the following command:
 ```
 node --inspect-brk index.js
 ```
+
+To debug unit tests:
+
+```
+npm run test:debug
+```
