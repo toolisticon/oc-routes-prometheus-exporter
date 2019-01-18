@@ -20,22 +20,28 @@ node {
 
         stage('Build') {
             image = docker.build('toolisticon/oc-routes-prometheus-exporter')
-            nodeJS.nvmRun('clean');
+            nodeJS.nvmRun('clean')
         }
 
         stage('Test') {
-           nodeJS.nvmRun('test');
+           nodeJS.nvmRun('test')
         }
 
         stage('Deploy') {
-            // TODO NPM publish
+            // NodeJS Publish
+            if(git.isProductionBranch()){
+            nodeJS.publish('.')
+            } else {
+              nodeJS.publishSnapshot('.', env.BUILD_NUMBER, env.BRANCH_NAME)
+            }
+            // Docker Publish
             docker.withRegistry('https://registry-1.docker.io/v2/', 'docker-hub-holisticon') {
                 image.push("${env.BUILD_NUMBER}")
             }
         }
 
     } catch (e) {
-  //      notify.buildMessage(currentBuild, true, 'holi-oss', 'Error with recent changes: ' + build.summarizeBuild(currentBuild))
+        notify.buildMessage(currentBuild, true, 'holi-oss', 'Error with recent changes: ' + build.summarizeBuild(currentBuild))
         throw e
     }
 
