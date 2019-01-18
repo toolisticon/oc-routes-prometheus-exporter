@@ -9,7 +9,8 @@ LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
       io.k8s.description="$DESCRIPTION" \
       io.k8s.display-name="sslverify" \
-      com.redhat.component="sslverify-container"
+      com.redhat.component="sslverify-container"\
+      org.label-schema.license=MIT
 
 USER root
 
