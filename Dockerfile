@@ -3,6 +3,7 @@ FROM centos/s2i-base-centos7
 ENV SUMMARY="OpenShift SSL verify"
 ENV DESCRIPTION="Application runtime for SSL Verifier"
 ENV TZ="Europe/Berlin"
+ENV NVM_DIR="$HOME/.nvm"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
@@ -15,8 +16,8 @@ USER root
 # Copy code
 ADD . $HOME
 
-# Upgrade packages
-RUN yum -y update
+# Upgrade packages and clean up cache 
+RUN yum -y update && rm -rf /tmp/setup && yum clean all && rm -rf /var/cache/yum
 
 # Adding Node Version manager and install app
 RUN export NVM_DIR="$HOME/.nvm" && mkdir -p $NVM_DIR && \
@@ -26,11 +27,13 @@ RUN export NVM_DIR="$HOME/.nvm" && mkdir -p $NVM_DIR && \
   echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm" >> ~/.bashrc && \
   source $NVM_DIR/nvm.sh && nvm install v8 && nvm use v8 && \
   chown -R default $HOME && \
-  rm -rf $HOME/node_modules/ && cd $HOME && npm i 
-
-# Clean Up cache
-RUN rm -rf /tmp/setup && yum clean all && rm -rf /var/cache/yum
+  rm -rf $HOME/node_modules/ && cd $HOME && npm i  && \
+  /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && \
+  mv $HOME/bin/oc_entrypoint.sh /usr/local/bin/entrypoint.sh && \
+  /usr/bin/fix-permissions /usr/local/bin/* && chmod +x /usr/local/bin/* && mkdir -p ${HOME}/.kube && \
+ /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && /usr/bin/fix-permissions ${HOME}/.kube/ && \
+ chown -R $USER:$(id -gn $USER) /opt/app-root/src/.config
 
 USER 1000
 
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
