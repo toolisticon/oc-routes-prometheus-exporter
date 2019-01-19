@@ -98,7 +98,7 @@ function exporter () {
 
 /* eslint no-new: "off" */
 // TODO move to config
-new CronJob('0 * * * * *', () => {
+new CronJob('0 0 * * * *', () => {
   log.info(`Triggering check`);
   triggerUpdate();
 }, null, true, 'UTC');
