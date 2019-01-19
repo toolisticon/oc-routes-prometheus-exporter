@@ -8,8 +8,6 @@ const prometheus = require('./lib/prometheus');
 
 const baseUrl = 'https://http-observatory.security.mozilla.org/api/v1/analyze';
 
-let hosts = [];
-
 async function triggerScan (hostname) {
   const options = {
     method: 'POST',
@@ -20,23 +18,23 @@ async function triggerScan (hostname) {
   request(options);
 }
 
-async function receiveScanResult (hostname) {
+async function receiveScanResult (hostname, additionalMetadata) {
+  log.info(`Reading scan results for ${hostname}`);
   const options = {
     method: 'GET',
     uri: `${baseUrl}?host=${hostname}`,
     json: true
   };
-
   const response = await request(options);
   response.url = hostname;
   response.quantile = response.score;
-  prometheus.addMozillaMetric(response);
+  prometheus.addMozillaMetric(response, additionalMetadata);
   // add cert metric
   sslChecker(hostname).then((result) => {
     result.url = hostname;
     result.status = 200;
     result.quantile = result.status;
-    prometheus.addExpireMetric(result);
+    prometheus.addExpireMetric(result, additionalMetadata);
   }).catch((err) => {
     const result = {
       url: hostname,
@@ -45,39 +43,31 @@ async function receiveScanResult (hostname) {
     if (err.code === 'ENOTFOUND') {
       result.status = 404;
       result.quantile = result.status;
-      prometheus.addExpireMetric(result);
+      prometheus.addExpireMetric(result, additionalMetadata);
     } else {
       result.status = 400;
       result.quantile = result.status;
-      prometheus.addExpireMetric(result);
+      prometheus.addExpireMetric(result, additionalMetadata);
     }
   });
 }
 
-async function triggerUpdate (hostname) {
-  log.info('Start reading route information.');
-  // read routes
-  routes.list().then(routes => {
-    // reset hosts
-    hosts = [];
-    log.info('Start triggering scan.');
-    // reread hosts from route info
-    routes.forEach((route) => {
-      const hostname = route.spec.host;
-      hosts.push(hostname);
-      log.info(`Triggering scan for ${hostname}`);
-      triggerScan(hostname);
+/**
+ *
+ * @param {String} hostname - hostname to check
+ * @param {Object} additionalMetadata - additional key-value based metadata
+ */
+async function updateRouteInfo (hostname, additionalMetadata) {
+  log.info(`Triggering scan for ${hostname}`);
+  triggerScan(hostname);
+  // defer read results
+  setTimeout(() => receiveScanResult(hostname, additionalMetadata), 200);
+}
 
-      // defer read results
-      setTimeout(() => {
-        log.info(`Receiving results for ${hosts.length} configured hosts.`);
-        hosts.forEach((hostname) => {
-          log.info(`Reading scan results for ${hostname}`);
-          receiveScanResult(hostname);
-        });
-      }, 200);
-    });
-  }, log.error);
+async function triggerUpdate () {
+  log.info('Start reading route information.');
+  // read hosts from route info
+  routes.list().then(routes => routes.forEach((route) => updateRouteInfo(route.spec.host, route.metadata), log.error), log.error);
 }
 
 // start http server
@@ -102,5 +92,8 @@ new CronJob('0 0 * * * *', () => {
   log.info(`Triggering check`);
   triggerUpdate();
 }, null, true, 'UTC');
+
+// trigger one update immediatly
+triggerUpdate();
 
 exporter();
