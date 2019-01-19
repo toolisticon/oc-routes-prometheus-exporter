@@ -29,11 +29,13 @@ async function receiveScanResult (hostname) {
 
   const response = await request(options);
   response.url = hostname;
+  response.quantile = response.score;
   prometheus.addMozillaMetric(response);
   // add cert metric
   sslChecker(hostname).then((result) => {
     result.url = hostname;
     result.status = 200;
+    result.quantile = result.status;
     prometheus.addExpireMetric(result);
   }).catch((err) => {
     const result = {
@@ -42,9 +44,11 @@ async function receiveScanResult (hostname) {
     };
     if (err.code === 'ENOTFOUND') {
       result.status = 404;
+      result.quantile = result.status;
       prometheus.addExpireMetric(result);
     } else {
       result.status = 400;
+      result.quantile = result.status;
       prometheus.addExpireMetric(result);
     }
   });
@@ -88,14 +92,13 @@ function exporter () {
   });
 
   const port = 9000; // TODO move to config
-
   server.listen(port);
   log.info(`prometheus-exporter listening at ${port}`);
 }
 
 /* eslint no-new: "off" */
 // TODO move to config
-new CronJob('0 0 * * * *', () => {
+new CronJob('0 * * * * *', () => {
   log.info(`Triggering check`);
   triggerUpdate();
 }, null, true, 'UTC');

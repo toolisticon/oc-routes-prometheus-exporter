@@ -7,6 +7,7 @@
     "clean": "npm i",
     "debug": "node --inspect-brk index.js",
     "start": "node index.js",
+    "watch": "nodemon node index.js",
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
