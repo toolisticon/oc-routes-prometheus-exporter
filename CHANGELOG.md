@@ -1,3 +1,14 @@
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.0...v0.4.1) (2019-01-19)
+
+
+### Bug Fixes
+
+* **Cron:** Set Hourly cron again ([78b706c](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/78b706c))
+* **Metrics:** Correct metrics format errors ([b094a1a](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/b094a1a))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.2...v0.4.0) (2019-01-18)
 
