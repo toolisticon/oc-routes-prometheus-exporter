@@ -1,3 +1,13 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.5.0...v0.5.1) (2019-01-21)
+
+
+### Bug Fixes
+
+* **Prometheus:** Corrected parsing. ([dd696a8](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/dd696a8))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.1...v0.5.0) (2019-01-21)
 
