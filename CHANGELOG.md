@@ -1,3 +1,14 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.1...v0.5.0) (2019-01-21)
+
+
+### Features
+
+* **Config:** Adding configuration via env vars ([373e599](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/373e599)), closes [#2](https://github.com/toolisticon/oc-routes-prometheus-exporter/issues/2)
+* **Prometheus:** Adding oc metadata to metrics ([bf83bd1](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/bf83bd1)), closes [#4](https://github.com/toolisticon/oc-routes-prometheus-exporter/issues/4)
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.0...v0.4.1) (2019-01-19)
 
