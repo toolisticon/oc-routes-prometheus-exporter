@@ -1,5 +1,10 @@
-<a name="0.5.1"></a>
-## [0.5.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.0...v0.5.1) (2019-01-21)
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.0...v1.0.1) (2019-01-21)
+
+
+### Bug Fixes
+
+* **Publish:** Correct publishing ([bfd79a7](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/bfd79a7))
 
 
 
