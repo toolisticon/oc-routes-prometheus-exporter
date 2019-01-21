@@ -72,6 +72,10 @@ You can override the config via environment variables:
    LOG_LEVEL: // set log level, default is 'ERROR' ('INFO' outputs details info)
 ```
 
+You'll find a Grafana Dashboard [here](https://grafana.com/dashboards/9693):
+
+![](docs/images/sample_dashboard.png)
+
 ## Troubleshooting
 
 If the service account does not have access to projects, you will see this message
