@@ -36,7 +36,8 @@ async function receiveScanResult (hostname, additionalMetadata) {
     result.url = hostname;
     result.status = 200;
     result.quantile = result.status;
-    prometheus.addExpireMetric(result, additionalMetadata);
+    prometheus.addDetailsMetric(result, additionalMetadata);
+    prometheus.addExpireMetric({ url: result.url, quantile: result.days_remaining }, additionalMetadata);
   }).catch((err) => {
     const result = {
       url: hostname,
