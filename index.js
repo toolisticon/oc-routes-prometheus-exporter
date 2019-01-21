@@ -2,6 +2,8 @@ const CronJob = require('cron').CronJob;
 const http = require('http');
 const request = require('request-promise-native');
 const sslChecker = require('ssl-checker');
+
+const config = require('./lib/config');
 const log = require('./lib/logger');
 const routes = require('./lib/routes');
 const prometheus = require('./lib/prometheus');
@@ -81,14 +83,12 @@ function exporter () {
     }
   });
 
-  const port = 9000; // TODO move to config
-  server.listen(port);
-  log.info(`prometheus-exporter listening at ${port}`);
+  server.listen(config.port);
+  log.info(`prometheus-exporter listening at ${config.port}`);
 }
 
 /* eslint no-new: "off" */
-// TODO move to config
-new CronJob('0 0 * * * *', () => {
+new CronJob(config.cron, () => {
   log.info(`Triggering check`);
   triggerUpdate();
 }, null, true, 'UTC');
