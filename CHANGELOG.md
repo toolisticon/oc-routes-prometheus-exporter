@@ -1,4 +1,19 @@
 <a name="0.5.1"></a>
+## [0.5.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.0...v0.5.1) (2019-01-21)
+
+
+
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.5.1...v1.0.0) (2019-01-21)
+
+
+### Features
+
+* **Prometheus:** Expose days remaining as extra metric ([da2b049](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/da2b049))
+
+
+
+<a name="0.5.1"></a>
 ## [0.5.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.5.0...v0.5.1) (2019-01-21)
 
 
