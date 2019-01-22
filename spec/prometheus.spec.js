@@ -35,12 +35,12 @@ describe('prometheus', () => {
     it('should add additional data objects', () => {
       prometheus.addMozillaMetric({ quantile: 1 }, { key1: 'a', key2: 'b' });
       const result = prometheus.renderMetrics();
-      expect(result.indexOf('security_ssl_mozilla_observatory{quantile="1",key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
+      expect(result.indexOf('security_ssl_mozilla_observatory{key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
     });
     it('should add additional data objects', () => {
       prometheus.addMozillaMetric({ quantile: 1 }, { key1: 'a', key2: 'b' });
       const result = prometheus.renderMetrics();
-      expect(result.indexOf('security_ssl_mozilla_observatory{quantile="1",key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
+      expect(result.indexOf('security_ssl_mozilla_observatory{key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
     });
     it('should convert data objects with nesting and dates', () => {
       prometheus.addMozillaMetric(validData);
@@ -57,21 +57,20 @@ describe('prometheus', () => {
     it('should add additional data objects', () => {
       prometheus.addExpireMetric({ quantile: 1 }, { key1: 'a', key2: 'b' });
       const result = prometheus.renderMetrics();
-      expect(result.indexOf('security_ssl_expire_days_remaining{quantile="1",key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
+      expect(result.indexOf('security_ssl_expire_days_remaining{key1="a",key2="b",} 1.0') >= 0).toBeTruthy();
     });
   });
   describe('ssl details', () => {
     it('should add unknown score if invalid request', () => {
       prometheus.addDetailsMetric({});
       const result = prometheus.renderMetrics();
-      console.log(result);
       expect(result.indexOf('security_ssl_details{} NaN') >= 0).toBeTruthy();
     });
     it('should add additional data objects', () => {
       prometheus.addDetailsMetric({ quantile: 200 }, { key1: 'a', key2: 'b' });
       const result = prometheus.renderMetrics();
       console.log(result);
-      expect(result.indexOf('security_ssl_details{quantile="200",key1="a",key2="b",} 200.0') >= 0).toBeTruthy();
+      expect(result.indexOf('security_ssl_details{key1="a",key2="b",} 200.0') >= 0).toBeTruthy();
     });
   });
 });
