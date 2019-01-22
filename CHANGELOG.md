@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.1...v1.0.2) (2019-01-22)
+
+
+### Bug Fixes
+
+* **Prometheus:** Corrected metrics expose ([6e3a721](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/6e3a721))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.0...v1.0.1) (2019-01-21)
 
