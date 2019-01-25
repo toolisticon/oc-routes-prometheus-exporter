@@ -70,7 +70,11 @@ async function updateRouteInfo (hostname, additionalMetadata) {
 async function triggerUpdate () {
   log.info('Start reading route information.');
   // read hosts from route info
-  routes.list().then(routes => routes.forEach((route) => updateRouteInfo(route.spec.host, route.metadata), log.error), log.error);
+  routes.list().then((routes) => {
+    // reset data on route update
+    prometheus.reset();
+    routes.forEach((route) => updateRouteInfo(route.spec.host, route.metadata), log.error);
+  }, log.error);
 }
 
 // start http server
