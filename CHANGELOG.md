@@ -1,3 +1,13 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.2...v1.0.3) (2019-01-25)
+
+
+### Bug Fixes
+
+* **Reset:** Reset store on route update ([61e71d6](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/61e71d6))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.1...v1.0.2) (2019-01-22)
 
