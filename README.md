@@ -6,7 +6,7 @@
 [![Docker Build Status](https://img.shields.io/docker/build/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/) [![Greenkeeper badge](https://badges.greenkeeper.io/toolisticon/oc-routes-prometheus-exporter.svg)](https://greenkeeper.io/)
 
 > Still **WIP**
 
