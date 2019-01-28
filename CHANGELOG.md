@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.3...v1.1.0) (2019-01-28)
+
+
+### Features
+
+* **NodeJS:** Use sslinfo library ([112013d](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/112013d))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.2...v1.0.3) (2019-01-25)
 
