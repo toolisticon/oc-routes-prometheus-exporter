@@ -30,7 +30,7 @@ RUN export NVM_DIR="$HOME/.nvm" && mkdir -p $NVM_DIR && \
   chown -R default $HOME && \
   rm -rf $HOME/node_modules/ && cd $HOME && npm i  && \
   /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && \
-  mv $HOME/bin/oc_entrypoint.sh /usr/local/bin/entrypoint.sh && \
+  mv $HOME/bin/entrypoint.sh /usr/local/bin/entrypoint.sh && \
   /usr/bin/fix-permissions /usr/local/bin/* && chmod +x /usr/local/bin/* && mkdir -p ${HOME}/.kube && \
  /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && /usr/bin/fix-permissions ${HOME}/.kube/ && \
  chown -R $USER:$(id -gn $USER) /opt/app-root/src/.config
