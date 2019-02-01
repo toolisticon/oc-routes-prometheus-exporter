@@ -1,4 +1,12 @@
-<a name="1.1.0"></a>
+## [1.1.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.1.0...v1.1.1) (2019-02-01)
+
+
+### Bug Fixes
+
+* **Prometheus:** Updating routes info correctly, keeping first old data and update then ([56565e6](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/56565e6))
+
+
+
 # [1.1.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.3...v1.1.0) (2019-01-28)
 
 
@@ -8,7 +16,6 @@
 
 
 
-<a name="1.0.3"></a>
 ## [1.0.3](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.2...v1.0.3) (2019-01-25)
 
 
@@ -18,7 +25,6 @@
 
 
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.1...v1.0.2) (2019-01-22)
 
 
@@ -28,7 +34,6 @@
 
 
 
-<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.0.0...v1.0.1) (2019-01-21)
 
 
@@ -38,7 +43,6 @@
 
 
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.5.1...v1.0.0) (2019-01-21)
 
 
@@ -48,7 +52,6 @@
 
 
 
-<a name="0.5.1"></a>
 ## [0.5.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.5.0...v0.5.1) (2019-01-21)
 
 
@@ -58,7 +61,6 @@
 
 
 
-<a name="0.5.0"></a>
 # [0.5.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.1...v0.5.0) (2019-01-21)
 
 
@@ -69,7 +71,6 @@
 
 
 
-<a name="0.4.1"></a>
 ## [0.4.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.4.0...v0.4.1) (2019-01-19)
 
 
@@ -80,7 +81,6 @@
 
 
 
-<a name="0.4.0"></a>
 # [0.4.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.2...v0.4.0) (2019-01-18)
 
 
@@ -96,7 +96,6 @@
 
 
 
-<a name="0.3.2"></a>
 ## [0.3.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.1...v0.3.2) (2019-01-18)
 
 
@@ -106,7 +105,6 @@
 
 
 
-<a name="0.3.1"></a>
 ## [0.3.1](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.3.0...v0.3.1) (2019-01-18)
 
 
@@ -116,7 +114,6 @@
 
 
 
-<a name="0.3.0"></a>
 # [0.3.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v0.2.0...v0.3.0) (2019-01-18)
 
 
@@ -132,7 +129,6 @@
 
 
 
-<a name="0.2.0"></a>
 # [0.2.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/08fa87d...v0.2.0) (2019-01-18)
 
 
