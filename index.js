@@ -6,11 +6,11 @@ const updateRouteInfo = require('@toolisticon/ssl-hostinfo-prometheus-exporter')
 const startPrometheusListener = require('@toolisticon/ssl-hostinfo-prometheus-exporter').startPrometheusListener;
 const routes = require('./lib/routes');
 
-async function triggerUpdate() {
+async function triggerUpdate () {
   log.info('Start reading route information.');
   // read hosts from route info
   routes.list().then((routeList) => {
-    let hostnames = [];
+    const hostnames = [];
     // reconstruct hostname data on route update
     routeList.forEach((route) => hostnames.push(route.spec.host), log.error);
     updateHosts(hostnames);

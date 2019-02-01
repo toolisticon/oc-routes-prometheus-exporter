@@ -11,9 +11,9 @@ LABEL summary="$SUMMARY" \
       version="$VERSION" \
       author="$AUTHOR" \
       io.k8s.description="$DESCRIPTION" \
-      io.k8s.display-name="sslverify" \
-      io.k8s.tags="ssl,routes" \
-      com.redhat.component="sslverify-container"\
+      io.k8s.display-name="routesverify" \
+      io.k8s.tags="ssl,certificates,routes" \
+      com.redhat.component="routes-verify-container"\
       org.label-schema.license=MIT
 
 USER root
