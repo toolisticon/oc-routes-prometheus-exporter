@@ -1,17 +1,19 @@
 const CronJob = require('cron').CronJob;
 const config = require('@toolisticon/ssl-hostinfo-prometheus-exporter').config;
 const log = require('@toolisticon/ssl-hostinfo-prometheus-exporter').logger;
-const resetRouteInfo = require('@toolisticon/ssl-hostinfo-prometheus-exporter').resetRouteInfo;
+const updateHosts = require('@toolisticon/ssl-hostinfo-prometheus-exporter').updateHosts;
 const updateRouteInfo = require('@toolisticon/ssl-hostinfo-prometheus-exporter').updateRouteInfo;
 const startPrometheusListener = require('@toolisticon/ssl-hostinfo-prometheus-exporter').startPrometheusListener;
 const routes = require('./lib/routes');
 
-async function triggerUpdate () {
+async function triggerUpdate() {
   log.info('Start reading route information.');
   // read hosts from route info
   routes.list().then((routeList) => {
-    // reset data on route update
-    resetRouteInfo();
+    let hostnames = [];
+    // reconstruct hostname data on route update
+    routeList.forEach((route) => hostnames.push(route.spec.host), log.error);
+    updateHosts(hostnames);
     routeList.forEach((route) => updateRouteInfo(route.spec.host, route.metadata), log.error);
   }, log.error);
 }
