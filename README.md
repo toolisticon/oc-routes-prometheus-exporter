@@ -5,11 +5,10 @@
 [![Build Status](https://jenkins.holisticon.de/buildStatus/icon?job=toolisticon/oc-routes-prometheus-exporter/master)](https://jenkins.holisticon.de/blue/organizations/jenkins/toolisticon%2Foc-routes-prometheus-exporter/branches/)
 [![Docker Build Status](https://img.shields.io/docker/automated/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
+[![npm downloads](https://img.shields.io/npm/dm/oc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/oc-routes-prometheus-exporter)
+[![npm downloads](https://img.shields.io/npm/dt/oc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/oc-routes-prometheus-exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/toolisticon/oc-routes-prometheus-exporter.svg)](https://greenkeeper.io/)
-
-> Still **WIP**
-
 
 ## Usage
 
@@ -54,6 +53,9 @@ Now using node v8.15.0 (npm v6.4.1)
 [2019-01-18T15:00:00.006Z] Start reading route information.
 [2019-01-18T15:00:05.133Z] Start triggering scan.
 ```
+
+## Sample Values
+
 The metrics are available via via localhost:9000 on the pod:
 
 ```
