@@ -2,11 +2,10 @@
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter.svg?branch=master)](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter)
-[![Build Status](https://jenkins.holisticon.de/buildStatus/icon?job=toolisticon/oc-routes-prometheus-exporter/master)](https://jenkins.holisticon.de/blue/organizations/jenkins/toolisticon%2Foc-routes-prometheus-exporter/branches/)
 [![Docker Build Status](https://img.shields.io/docker/automated/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
-[![npm downloads](https://img.shields.io/npm/dm/oc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/oc-routes-prometheus-exporter)
-[![npm downloads](https://img.shields.io/npm/dt/oc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/oc-routes-prometheus-exporter)
+[![npm downloads](https://img.shields.io/npm/dm/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
+[![npm downloads](https://img.shields.io/npm/dt/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/toolisticon/oc-routes-prometheus-exporter.svg)](https://greenkeeper.io/)
 
