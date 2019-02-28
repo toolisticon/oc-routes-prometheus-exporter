@@ -10,7 +10,7 @@
     "watch": "nodemon node index.js",
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "test": "HOME=/tmp jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "test:watch": "nodemon jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "test:debug": "node --inspect-brk -i node_modules/jasmine/bin/jasmine.js spec/routes.spec.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
