@@ -5,7 +5,6 @@
 [![Docker Build Status](https://img.shields.io/docker/automated/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![npm downloads](https://img.shields.io/npm/dm/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
-[![npm downloads](https://img.shields.io/npm/dt/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/toolisticon/oc-routes-prometheus-exporter.svg)](https://greenkeeper.io/)
 
@@ -63,7 +62,7 @@ security_ssl_details{valid="true",valid_from="1545553135000",valid_to="155332913
 security_ssl_expire_days_remaining{url="api-test.sample.com",name="api-test",namespace="project1",labels_app="myapp",labels_environment="test",} 60.0
 ```
 
-If you want to complete use 
+If you want to complete use
 
 ## Configuration
 
