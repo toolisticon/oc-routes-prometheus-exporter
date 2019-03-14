@@ -51,7 +51,7 @@
     "@toolisticon/ssl-hostinfo-prometheus-exporter": "^1.0.2",
     "cron": "^1.6.0",
     "moment": "^2.23.0",
-    "openshift-rest-client": "^1.6.2",
+    "openshift-rest-client": "^2.0.0",
     "request-promise-native": "^1.0.5",
     "ssl-checker": "^1.2.1"
   },
