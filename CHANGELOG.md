@@ -1,3 +1,13 @@
+# [1.2.0](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.1.5...v1.2.0) (2019-04-02)
+
+
+### Features
+
+* **Logging:** Adding log config to docker image ([e386da6](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/e386da6))
+* **Logging:** Use logging framework which is ELK-compatible ([ef7ebe0](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/ef7ebe0))
+
+
+
 ## [1.1.5](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.1.4...v1.1.5) (2019-03-04)
 
 
