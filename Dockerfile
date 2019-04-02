@@ -5,6 +5,8 @@ ENV DESCRIPTION="Application runtime for SSL Verifier"
 ENV AUTHOR="Holisticon AG"
 ENV TZ="Europe/Berlin"
 ENV NVM_DIR="$HOME/.nvm"
+ENV CONSOLE_LOG="true"
+ENV LOG_LEVEL="INFO"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
