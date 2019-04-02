@@ -22,6 +22,8 @@ ENV DESCRIPTION="openshift-ssl-verify runtime"
 ENV TZ="Europe/Berlin"
 ENV OPENSHIFT_VERSION=3.10.0
 ENV NVM_DIR="$HOME/.nvm"
+ENV CONSOLE_LOG="true"
+ENV LOG_LEVEL="INFO"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
@@ -70,7 +72,8 @@ You can override the config via environment variables:
 ```
    SERVER_PORT: // set desired port for prometheus endpoint, defaults to 9000
    CRON: // set cron pattern, default is '0 0 * * * *',
-   LOG_LEVEL: // set log level, default is 'ERROR' ('INFO' outputs details info)
+   LOG_LEVEL: // set log level, default is 'ERROR' ('INFO' outputs details info),
+   CONSOLE_LOG: // set to true to omit logging to file, otherwise logs will be written to `logs` dir
 ```
 
 You'll find a Grafana Dashboard [here](https://grafana.com/dashboards/9693):

@@ -1,10 +1,13 @@
 const CronJob = require('cron').CronJob;
+const pkg = require('./package.json');
 const config = require('@toolisticon/ssl-hostinfo-prometheus-exporter').config;
 const log = require('@toolisticon/ssl-hostinfo-prometheus-exporter').logger;
 const updateHosts = require('@toolisticon/ssl-hostinfo-prometheus-exporter').updateHosts;
 const updateRouteInfo = require('@toolisticon/ssl-hostinfo-prometheus-exporter').updateRouteInfo;
 const startPrometheusListener = require('@toolisticon/ssl-hostinfo-prometheus-exporter').startPrometheusListener;
 const routes = require('./lib/routes');
+
+log.info('oc-routes-prometheus-exporter info', { version: pkg.version });
 
 async function triggerUpdate () {
   log.info('Start reading route information.');
