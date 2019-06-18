@@ -70,6 +70,7 @@ If you want to complete use
 
 You can override the config via environment variables:
 ```
+   OPENSHIFT_MASTER_URL
    SERVER_PORT: // set desired port for prometheus endpoint, defaults to 9000
    CRON: // set cron pattern, default is '0 0 * * * *',
    LOG_LEVEL: // set log level, default is 'ERROR' ('INFO' outputs details info),
@@ -82,6 +83,9 @@ You'll find a Grafana Dashboard [here](https://grafana.com/dashboards/9693):
 
 ## Troubleshooting
 
+
+### Access denied
+
 If the service account does not have access to projects, you will see this message
 ```
 Logged into "https://...:8443" as "system:serviceaccount:security:sslverify" using the token provided.
@@ -89,6 +93,15 @@ Logged into "https://...:8443" as "system:serviceaccount:security:sslverify" usi
 You don't have any projects. Contact your system administrator to request a project.
 Welcome! See 'oc help' to get started.
 ```
+
+### SSL error
+
+If you see this kind of error:
+```
+error: The server uses a certificate signed by unknown authority. You may need to use the --certificate-authority flag to provide the path to a certificate file for the certificate authority, or --insecure-skip-tls-verify to bypass the certificate check and use insecure connections.
+```
+
+you are using the internal kubernetes host which might be secured by self-signed certificates. Either use the public endpoint with proper ssl certificates or install the certificate to the keystore.
 
 ## Development
 
