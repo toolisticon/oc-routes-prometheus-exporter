@@ -1,3 +1,13 @@
+## [1.2.3](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.2...v1.2.3) (2019-07-31)
+
+
+### Features
+
+* **Core:** Update SSL verifier lib ([02e0d0c](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/02e0d0c))
+* **Security:** Corrected known vulnerabilities ([2a84379](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/2a84379))
+
+
+
 ## [1.2.2](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.1...v1.2.2) (2019-07-12)
 
 
