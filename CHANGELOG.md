@@ -1,3 +1,12 @@
+## [1.2.4](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.3...v1.2.4) (2019-10-01)
+
+
+### Features
+
+* **Security:** Corrected known vulnerabilities ([6ba9fea](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/6ba9fea))
+
+
+
 ## [1.2.3](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.2...v1.2.3) (2019-07-31)
 
 
