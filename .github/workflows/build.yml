@@ -48,7 +48,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: npm publish
-        if: github.ref == 'master'
+        if: contains( github.ref, 'master' ) || contains( github.base_ref, 'master' )
 
       - name: publish release docker image
         uses: docker/build-push-action@v1
@@ -57,13 +57,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: toolisticon/ssl-hostinfo-prometheus-exporter
           tags: latest
-        if: github.ref == 'master'
+        if: contains( github.ref, 'master' ) || contains( github.base_ref, 'master' )
 
       - name: publish preview npm package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: npm publish --tag next
-        if: github.ref == 'develop'
+        if: contains( github.ref, 'develop' ) || contains( github.base_ref, 'develop' )
 
       - name: publish preview docker image
         uses: docker/build-push-action@v1
@@ -72,4 +72,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: toolisticon/ssl-hostinfo-prometheus-exporter
           tags: next
-        if: github.ref == 'develop'
+        if: contains( github.ref, 'develop' ) || contains( github.base_ref, 'develop' )
