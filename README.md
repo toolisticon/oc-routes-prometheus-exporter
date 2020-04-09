@@ -6,7 +6,6 @@
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![npm downloads](https://img.shields.io/npm/dm/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![Docker Stars](https://img.shields.io/docker/stars/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/toolisticon/oc-routes-prometheus-exporter.svg)](https://greenkeeper.io/)
 
 ## Usage
 
