@@ -52,7 +52,7 @@
     "moment": "^2.23.0",
     "openshift-rest-client": "^4.0.0",
     "request-promise-native": "^1.0.5",
-    "ssl-checker": "^1.2.1"
+    "ssl-checker": "^2.0.4"
   },
   "devDependencies": {
     "@toolisticon/ssl-hostinfo-prometheus-exporter": "^1.4.1",
