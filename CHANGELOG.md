@@ -1,3 +1,7 @@
+## [1.2.6](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.5...v1.2.6) (2020-05-07)
+
+
+
 ## [1.2.5](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.4...v1.2.5) (2020-04-09)
 
 
