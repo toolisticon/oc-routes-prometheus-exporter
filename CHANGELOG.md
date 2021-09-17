@@ -1,3 +1,13 @@
+## [1.2.8](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.7...v1.2.8) (2021-09-17)
+
+
+### Bug Fixes
+
+* **Security:** Resolve security issues ([0f50358](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/0f50358dca7a548445780bdc9f9d0e9af77a4747))
+* **Security:** Resolve security issues ([13d4c0e](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/13d4c0e82171bb5d4b6dcf351da0e4d964cba479))
+
+
+
 ## [1.2.7](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.6...v1.2.7) (2020-09-25)
 
 
