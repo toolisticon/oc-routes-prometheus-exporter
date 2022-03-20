@@ -1,3 +1,12 @@
+## [1.2.9](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.8...v1.2.9) (2022-03-20)
+
+
+### Features
+
+* **NodeJS:** Use latest NodeJS ([ef01995](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/ef019950f4a24e1d7dd0c6d251dc1a7e3e21b5ea))
+
+
+
 ## [1.2.8](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.7...v1.2.8) (2021-09-17)
 
 
