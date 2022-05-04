@@ -49,7 +49,7 @@
   "homepage": "https://github.com/toolisticon/oc-routes-prometheus-exporter",
   "dependencies": {
     "@toolisticon/ssl-hostinfo-prometheus-exporter": "^2.1.4",
-    "cron": "^1.6.0",
+    "cron": "^2.0.0",
     "openshift-rest-client": "^7.0.0"
   },
   "devDependencies": {
