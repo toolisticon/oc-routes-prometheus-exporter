@@ -1,3 +1,12 @@
+## [1.2.12](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.11...v1.2.12) (2022-08-29)
+
+
+### Bug Fixes
+
+* **Build:** Corrected nvm setup and use Node v18 ([3b251d7](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/3b251d767aadfd01b4617f42881579cfe886cb5b))
+
+
+
 ## [1.2.11](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.10...v1.2.11) (2022-06-03)
 
 
