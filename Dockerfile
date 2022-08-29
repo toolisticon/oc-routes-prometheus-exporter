@@ -1,12 +1,12 @@
-FROM centos/s2i-base-centos7
-
+FROM registry.access.redhat.com/ubi8/ubi-init:latest
 ENV SUMMARY="OpenShift SSL verify"
 ENV DESCRIPTION="Application runtime for SSL Verifier"
 ENV AUTHOR="Holisticon AG"
 ENV TZ="Europe/Berlin"
 ENV NVM_DIR="$HOME/.nvm"
 ENV CONSOLE_LOG="true"
-ENV LOG_LEVEL="INFO"
+ENV HOME=/opt/app
+ENV NODE_VERSION="18"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
@@ -20,6 +20,8 @@ LABEL summary="$SUMMARY" \
 
 USER root
 
+RUN mkdir -p $HOME
+
 # Copy code
 ADD . $HOME
 
@@ -29,17 +31,11 @@ RUN yum -y update && rm -rf /tmp/setup && yum clean all && rm -rf /var/cache/yum
 # Adding Node Version manager and install app
 RUN export NVM_DIR="$HOME/.nvm" && mkdir -p $NVM_DIR && \
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.38.0/install.sh | bash && \
-  chmod +x $HOME/.nvm/nvm.sh && \
-  echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bashrc && \
-  echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm" >> ~/.bashrc && \
-  source $NVM_DIR/nvm.sh && nvm install v18 && nvm use v18 && \
-  chown -R default $HOME && \
-  rm -rf $HOME/node_modules/ && cd $HOME && npm i  && \
-  /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && \
-  mv $HOME/bin/entrypoint.sh /usr/local/bin/entrypoint.sh && \
-  /usr/bin/fix-permissions /usr/local/bin/* && chmod +x /usr/local/bin/* && mkdir -p ${HOME}/.kube && \
- /usr/bin/fix-permissions ${NVM_DIR}/* && /usr/bin/fix-permissions ${HOME}/* && /usr/bin/fix-permissions ${HOME}/.kube/ && \
- chown -R $USER:$(id -gn $USER) /opt/app-root/src/
+  chmod +x $HOME/.nvm/nvm.sh && echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bashrc && echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm" >> ~/.bashrc && \
+  source $NVM_DIR/nvm.sh && nvm install v${NODE_VERSION} && nvm use v${NODE_VERSION} && \
+  rm -rf $HOME/node_modules/ && cd $HOME && npm i && \
+  mv $HOME/bin/* /usr/local/bin/ && \
+  chmod +x /usr/local/bin/* && chown -R $USER:$(id -gn $USER) $HOME
 
 USER 1000
 
