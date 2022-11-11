@@ -1,7 +1,7 @@
 # Monitor OpenShift Routes in Prometheus
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter.svg?branch=master)](https://travis-ci.org/toolisticon/oc-routes-prometheus-exporter)
+[![CI](https://github.com/toolisticon/oc-routes-prometheus-exporter/actions/workflows/build.yml/badge.svg)](https://github.com/toolisticon/oc-routes-prometheus-exporter/actions/workflows/build.yml)
 [![Docker Build Status](https://img.shields.io/docker/automated/toolisticon/oc-routes-prometheus-exporter.svg)](https://hub.docker.com/r/toolisticon/oc-routes-prometheus-exporter/)
 [![npm version](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://badge.fury.io/js/%40toolisticon%2Foc-routes-prometheus-exporter)
 [![npm downloads](https://img.shields.io/npm/dm/%40toolisticon%2Foc-routes-prometheus-exporter.svg)](https://www.npmjs.com/package/%40toolisticon%2Foc-routes-prometheus-exporter)
