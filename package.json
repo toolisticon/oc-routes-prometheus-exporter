@@ -62,7 +62,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.0.0",
-    "jasmine": "^4.0.2",
+    "jasmine": "^5.0.0",
     "nodemon": "^2.0.0"
   }
 }
