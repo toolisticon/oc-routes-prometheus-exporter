@@ -1,3 +1,13 @@
+## [1.2.17](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.16...v1.2.17) (2023-05-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @toolisticon/ssl-hostinfo-prometheus-exporter to v2.1.11 ([cc881ef](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/cc881efd97bd01c974e9fb3d5a8bd84c8fab9142))
+* **deps:** update dependency cron to v2.3.1 ([61473c3](https://github.com/toolisticon/oc-routes-prometheus-exporter/commit/61473c31b84cf4998e5ab047f2d1e678c68570db))
+
+
+
 ## [1.2.16](https://github.com/toolisticon/oc-routes-prometheus-exporter/compare/v1.2.15...v1.2.16) (2023-04-30)
 
 
